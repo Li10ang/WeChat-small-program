@@ -1,0 +1,117 @@
+<!--微信详情页-->
+<!--顶部的样式-->
+<view class="top">
+    <view class="top-title">
+        <view class="top-title-name">微信</view>
+        <view class="top-title-name">监控</view>
+            <image class="top-title-bg" src="../../image/circle1.png"></image>
+    </view>
+    <view class="time">更新时间：{{time}}</view>
+    <view class="time">如需更详细信息请登陆www.weizhshu.com</view>
+</view>
+<!--基本信息-->
+<view class="content">
+    <!--账号信息-->
+    <view class="items first-items">
+        <!--<image src="{{list.src}}" class="art-img"></image>-->
+        <image src="http://www.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.circle_img}}" class="art-img"></image>
+        <view class="item">
+            <view class="item-list">
+                <text style="width:160rpx;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;display:inline-block;vertical-align: middle;">{{list.name}}</text>
+                <text class="type_name_left" wx:if="{{list.wxtype == 2}}">订阅号</text>
+                <text class="type_name_left" wx:elif="{{list.wxtype == 1}}">服务号</text>
+                <text class="type_name_left" wx:else="{{list.wxtype == 1}}"></text>
+                <text class="type_name_right">{{type_name_right}}</text>
+            </view>
+            <view class="item-list {{list}}">
+                <text>微信号：{{list.nick_name}}</text>
+            </view>
+        </view>
+        <image src="http://mp.weixin.qq.com/mp/qrcode?scene=10000004&size=102&__biz={{list.biz}}" class="art-img"></image>
+    </view>
+    <view class="items">
+        <view class="f14">微指数</view>
+        <view class="f24 tc font_blue">{{list.windex}}</view>
+    </view>
+    <view class="items">
+        <view class="f14">行业排名</view>
+        <view class="f24 tc font_yellow">第{{list.rank}}名</view>
+    </view>
+    <text class="class-title">近一周数据监控</text>
+    <view class="items">
+        <view class="f14">头条平均阅读数</view>
+        <view class="f24 tc font_blue" wx:if="{{list.read_num_head > 100000 }}">100000+</view>
+        <view class="f24 tc font_blue" wx:elif="{{ 100000 > list.read_num_head > 1 }}">{{list.read_num_head}}</view>
+        <view class="f24 tc font_blue" wx:else="">待更新</view>
+        <view class="line"></view>
+        <view class="col-6 tl border-right">
+            <view class="f14">平均阅读数</view>
+            <view class="f24 tl font_blue" wx:if="{{list.read_num > 100000 }}">10000+</view>
+            <view class="f24 tl font_blue" wx:else="">{{list.read_num}}</view>
+        </view>
+        <view class="col-6 tr">
+            <view class="f14 good-num">平均点赞数</view>
+            <view class="f24 tr font_blue good-num">{{list.like_num}}</view>
+        </view>
+    </view>
+    <text class="class-title">大数据预估</text>
+    <view class="items">
+        <view class="f14">预估账号价值(元)</view>
+        <view class="f24 tc font_blue">{{list.mp_value}}</view>
+        <view class="line"></view>
+        <view class="col-6 tl border-right">
+            <view class="f14">预估累计粉丝数</view>
+            <view class="f24 tl font_blue">{{list.fans_num}}</view>
+        </view>
+        <view class="col-6 tr">
+            <view class="f14 good-num">预估活跃粉丝数</view>
+            <view class="f24 tr font_blue good-num">{{list.fans_active}}</view>
+        </view>
+    </view>
+    <text class="class-title">近一周发文习惯</text>
+    <view class="item-box">
+        <view class="circle-box">
+            <view class="bg-circle">
+                <text class="f30">{{list.article_num}}</text>篇
+            </view>
+            <text class="circle-box-title">每天发布篇数</text>
+        </view>
+        <view class="circle-box">
+            <view class="bg-circle">
+                <text class="f30">{{list.pub_days}}</text>篇
+            </view>
+            <text class="circle-box-title">一周发布天数</text>
+        </view>
+        <view class="circle-box">
+            <view class="bg-circle">
+                <text class="f30">{{list.pub_times}}</text>篇
+            </view>
+            <text class="circle-box-title">每天发布次数</text>
+        </view>
+    </view>
+    <!--<text class="class-title">运营走势图</text>
+    <view>
+        <block>图表没法搞啊</block>
+    </view>-->
+    <text class="class-title {{article}}">七天热门</text>
+    <view class="article-box">
+        <block wx:if="{{article.length=='0'}}">
+            <text>暂无数据</text>
+        </block>
+        <block wx:else="">
+            <block wx:for="{{article}}">
+                <!--<navigator url="文章详情">-->
+                    <view class="article">
+                        <image class="fl article-left-bg" src="http://www.weizhishu.com/timthumb.php?w=160&h=100&q=100&src={{item.cover}}"></image>
+                        <view class="article-title">
+                            <view class="article-name">{{item.title}}</view>
+                            <text class="article-list">{{item.digest}}</text>
+                        </view>
+                    </view>
+                <!--</navigator>-->
+            </block>
+        </block>
+    </view>
+</view>
+
+<include src="../list/footer.wxml"/>

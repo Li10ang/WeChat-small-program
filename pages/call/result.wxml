@@ -1,0 +1,78 @@
+<!--大号估值的结果页-->
+<view class="top">
+    <view class="top-title">
+        <view class="top-title-name">估值</view>
+        <view class="top-title-name">结果</view>
+        <block wx:if="{{result == 'wx'}}">
+            <image class="top-title-bg" src="../../image/circle3.png"></image>
+        </block>
+        <block wx:else="{{result}}">
+            <image class="top-title-bg" src="../../image/circle4.png"></image>
+        </block>
+    </view>
+    <view class="time">更新时间：{{list.updatetime}}</view>
+    <view class="time">如需更详细信息请登陆www.weizhshu.com</view>
+</view>
+<view class="content {{result == 'wx'}}">
+    <view wx:if="{{result == 'wx'}}">
+        <!--账号信息-->
+        <view class="items first-items">
+            <!--<image src="{{list.src}}" class="art-img"></image>-->
+            <image src="http://www.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.square_img}}" class="art-img"></image>
+            <view class="itemwx">
+                <view class="item-list">
+                    <text style="width:160rpx;overflow: hidden;white-space: nowrap;text-overflow: ellipsis;display:inline-block;vertical-align: middle;">{{list.name}}</text>
+                    <text class="type_name_left" wx:if="{{list.wxtype == 2}}">订阅号</text>
+                    <text class="type_name_left" wx:elif="{{list.wxtype == 1}}">服务号</text>
+                    <text class="type_name_left" wx:else="{{list.wxtype == 1}}"></text>
+                    <text class="type_name_right">{{type_name_right}}</text>
+                </view>
+                <view class="item-list {{list}}">
+                    <text>微信号：{{list.nick_name}}</text>
+                </view>
+            </view>
+            <image src="http://mp.weixin.qq.com/mp/qrcode?scene=10000004&size=102&__biz={{list.biz}}" class="art-img"></image>
+        </view>
+        <view class="items">
+            <view class="f14">预估账号价值</view>
+            <view class="f24 tc font_blue">{{list.mp_value}}</view>
+        </view>
+        <view class="items">
+            <view class="f14">预估单条广告价格</view>
+            <view class="f24 tc font_yellow">{{list.ad_value}}</view>
+        </view>
+    </view>
+    <view wx:elif="{{result == 'wb'}}">
+        <!--账号信息-->
+        <view class="items first-items">
+            <!--<image src="{{list.src}}" class="art-img"></image>-->
+            <view style="width:100%;text-align:center;"><image src="http://www.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.avatar}}" class="art-img"></image></view>
+            <view class="item">
+                <view class="item-list">
+                    <text>{{list.name}}</text>
+                    <text class="type_name_right">{{type_name_right}}</text>
+                </view>
+                <view class="item-list">
+                    <view class="item-list-l">关注{{list.num_followers}}</view>｜
+                    <view class="item-list-l">粉丝{{list.num_fans}}万</view>|
+                    <view class="item-list-l">微博{{list.num_weibo}}万</view>
+                </view>
+            </view>
+        </view>
+        <view class="items">
+            <view class="f14">预估账号价值</view>
+            <view class="f24 tc font_blue">{{list.mp_value}}</view>
+        </view>
+        <view class="items">
+            <view class="f14">预估单条广告价格</view>
+            <view class="f24 tc font_yellow">{{list.ad_value}}</view>
+        </view>
+        
+    </view>
+    <view class="bottom-title">
+        <view>*估值结果根据行业标准价格校准</view>
+        <view>如果您有微信公众号的买／卖需求</view>
+        <view>欢迎联系客服咨询（在公众号对话框页面点击微服务）</view>
+        <view>咨询电话：010-64773966转811</view>
+    </view>
+</view>

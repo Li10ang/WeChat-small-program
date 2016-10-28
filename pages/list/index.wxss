@@ -1,0 +1,123 @@
+/*动画*/
+.top-title-bg{
+    animation: rotate 0.8s ease-out 0.2s;
+}
+
+@keyframes rotate{
+    from{ transform: rotate(0deg) }
+    to{ transform: rotate(360deg) }
+}
+.top{
+    background: #007aff;
+    height: 140px;
+    width: 100%;
+    margin-top: -10px;
+    padding-top: 10px;
+}
+.top-title-bg{
+    background: url('image/bg_0.png') no-repeat center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;left: 0;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+.top-title{
+    margin: 20px auto;
+    background: #0062CC;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 80px;
+    position: relative
+}
+.btn-box{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.btn{
+    padding: 5px 8px;
+    color: #fff;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 10px;
+    float: left;
+}
+.btn.active{
+    color: #007aff;    
+    background: #fff;
+}
+.time{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #fff;
+}
+.names{
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+.bg2{
+    background: #e9eef3;
+}
+.name{
+    width: 80px;
+    height: 80px;
+    background: #ccc;
+    border-radius: 5px;
+    text-align: center;
+    line-height: 80px;
+    display: inline-block;
+    color: #fff;
+}
+.wzs{
+    background: #526cfd;
+}
+.cb{
+    background: #1875d1;
+}
+.gz{
+    background: #2095f2;
+}
+.zl{
+    background: #baddfa;
+}
+.hy{
+    background: #2095f2;
+}
+.bw{
+    background: #1875d1;
+}
+.titles{
+    width: 100px;
+    height: 60px;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 10px 0 10px 5px;
+}
+.title{
+    width: 360rpx;
+    height: 20px;
+    text-align: left;
+    display: inline-block;
+    line-height: 20px;
+    overflow: hidden;
+    white-space: nowrap;
+    font-size: 28rpx;
+    text-overflow: ellipsis;
+}
+.content{
+    text-align: center;
+}
+.footer{
+    text-align: center;
+    padding: 20px 0;
+}
+.footer-title-one{
+    font-size: 12px;
+}

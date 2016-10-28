@@ -1,0 +1,84 @@
+<!--搜索关键词页面-->
+<!--index.wxml-->
+<view class="top">
+    <view class="top-title">
+        <view class="top-title-topname">监控</view>
+        <view class="top-title-bottomname">关键词</view>
+            <image class="top-title-bg" src="../../image/bg_0.png"></image>
+    </view>
+    <view class="btn-box">
+        <view class="btn wx {{activewx}}" bindtap="wxcheck">微信</view>
+        <view class="btn wb {{activewb}}" bindtap="wbcheck">微博</view>
+    </view>
+    <view class="search">
+        <input type="text" class="search-t" placeholder="请输入您想查看的微博号" bindinput="bindChange" />
+        <view class="search-in" wx:if="{{active == 'wx'}}">
+            <navigator url="./details?wtype=wx&keyword={{keyword}}">
+                <!--<image src='http://www.weizhishu.com/img/phonelist/search_1.png' class="search-icon" bindtap="searchwx"></image>-->
+                <image src='http://www.weizhishu.com/img/phonelist/search_1.png' class="search-icon"></image>
+            </navigator>
+        </view>
+        <view class="search-in" wx:elif="{{active == 'wb'}}">
+            <navigator url="./details?wtype=wb&keyword={{keyword}}">
+                <image src='http://www.weizhishu.com/img/phonelist/search_1.png' class="search-icon"></image>
+            </navigator>
+        </view>
+    </view>
+</view>
+<!--结果-->
+<!--<view class="content" wx:if="{{result == 'wx'}}">
+    <view class="content-title">搜索结果</view>
+    <view class="border-box">
+    <block wx:for="{{list}}">
+            <view class="reslist-box">
+                <view class="list {{item.id}}">
+                    <navigator src="">
+                        <view class="avatar">
+                            <image src="http://www.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{item.square_img}}" class="avatar-bg"></image>
+                        </view>
+                        <view class="msg">
+                            <view class="msg-title">{{item.name}}<image src="http://release.weizhishu.com//img/phonelist/icon_wx.png" class="msg-icon"></image></view>
+                            <view class="msg-name">微信号：{{item.nick_name}}</view>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+    </block>
+    </view>   
+    <include src="../list/footer.wxml"/> 
+</view>
+<view class="content" wx:elif="{{result == 'wb'}}">
+    <view class="content-title">搜索结果微博</view>
+    <view class="border-box">
+    <block wx:for="{{list}}">
+            <view class="reslist-box">
+                <view class="list {{item.id}}">
+                    <navigator src="">
+                        <view class="avatar">
+                            <image src="http://www.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{item.avatar}}" class="avatar-bg"></image>
+                        </view>
+                        <view class="msg">
+                            <view class="msg-title">{{item.name}}<image src="http://release.weizhishu.com//img/phonelist/icon_wb.png" class="msg-icon"></image></view>
+                            <view class="msg-name">粉丝数：{{item.num_fans}}</view>
+                        </view>
+                    </navigator>
+                </view>
+            </view>
+    </block>
+    </view>
+    <include src="../list/footer.wxml"/> 
+</view> 
+<view class="content" wx:else=" ">
+    <view class="content-title">暂无搜索结果</view> 
+    <view class="block"></view>
+    <include src="../list/footer.wxml"/>
+</view>  -->
+<view class="content">
+    <view class="block"></view>
+    <include src="../list/footer.wxml"/>
+</view>
+<!--loading-->
+<loading hidden="{{hidden}}" bindchange="loadingChange">
+    加载中...
+  </loading>
+<!--底部-->

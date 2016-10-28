@@ -1,0 +1,59 @@
+{
+  "pages":[
+    "pages/list/index", 
+    "pages/phonehotlist/wxaccount",
+    "pages/phonehotlist/indexwx",
+
+    "pages/list/wblist",
+    "pages/phonehotlist/wbaccount",
+    "pages/phonehotlist/indexwb",
+
+    "pages/index/index",    
+
+    "pages/search/index",
+
+    "pages/search/keyword",
+    "pages/search/details",
+
+    "pages/call/index",
+    "pages/call/service",
+    "pages/call/yunying",
+    "pages/call/valuation",
+    "pages/call/result",
+
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "微指数学院",
+    "navigationBarTextStyle":"black"
+  },
+  "tabBar": {
+    "color": "#dddddd",
+    "selectedColor": "#2095f2",
+    "borderStyle": "black",
+    "backgroundColor": "#ffffff",
+    "list": [{
+      "pagePath": "pages/list/index",
+      "iconPath": "image/bangdan_normal.png",
+      "selectedIconPath": "image/bangdan_click.png",
+      "text": "微榜单"
+    }, {
+      "pagePath": "pages/search/index",
+      "iconPath": "image/detail_normal.png",
+      "selectedIconPath": "image/detail_click.png",
+      "text": "大号搜索"
+    }, {
+      "pagePath": "pages/search/keyword",
+      "iconPath": "image/keyword_normal.png",
+      "selectedIconPath": "image/keyword_click.png",
+      "text": "关键词搜索"
+    }, {
+      "pagePath": "pages/call/index",
+      "iconPath": "image/fuwu_normal.png",
+      "selectedIconPath": "image/fuwu_click.png",
+      "text": "微服务"
+    }]
+  }
+}

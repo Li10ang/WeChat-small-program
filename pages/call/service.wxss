@@ -1,0 +1,28 @@
+.box{
+    padding: 20rpx;
+}
+.small-icon{
+    width: 50rpx;
+    height: 50rpx;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 20rpx;
+}
+.title{
+    font-size: 36rpx;
+    margin-top: 30rpx;
+}
+.name{
+    font-size: 32rpx;
+    margin-top: 20rpx;
+}
+.item{
+    font-size: 28rpx;
+    margin: 20rpx 0;
+}
+.map-box{
+    margin: 0 auto;
+}
+map{
+    margin: 0 auto;
+}

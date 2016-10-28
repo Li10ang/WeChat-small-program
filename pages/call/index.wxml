@@ -1,0 +1,29 @@
+<!--微服务入口-->
+<view class="btn-box">
+    <!--代运营-->
+    <navigator url="./yunying">
+    <view class="btn yunying">
+        <image src="../../image/yunying.png" class="btn-icon"></image>
+        代运营
+    </view>
+    </navigator>
+    <!--大号估值-->
+    <navigator url="./valuation">
+        <view class="btn valuation">
+            <image src="../../image/guzhi.png" class="btn-icon"></image>
+            大号估值
+        </view>
+    </navigator>
+    <!--联系客服-->
+    <navigator url="./service">
+        <view class="btn service">
+            <image src="../../image/kefu.png" class="btn-icon"></image>
+            联系我们
+        </view>
+    </navigator>
+    <!--敬请期待-->
+    <view class="btn others">
+        <image src="../../image/qidai.png" class="btn-icon"></image>
+        敬请期待
+    </view>
+</view>

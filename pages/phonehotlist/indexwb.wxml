@@ -1,0 +1,123 @@
+<!--微博详情页-->
+<!--顶部的样式-->
+<view class="top">
+    <view class="top-title">
+        <view class="top-title-name">微博</view>
+        <view class="top-title-name">监控</view>
+            <image class="top-title-bg" src="../../image/circle2.png"></image>
+    </view>
+    <view class="time">更新时间：{{time}}</view>
+    <view class="time">如需更详细信息请登陆www.weizhshu.com</view>
+</view>
+<!--基本信息-->
+<view class="content">
+    <!--账号信息-->
+    <view class="items first-items">
+        <!--<image src="{{list.src}}" class="art-img"></image>-->
+        <view style="width:100%;text-align:center;"><image src="http://www.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.avatar}}" class="art-img"></image></view>
+        <view class="item">
+            <view class="item-list">
+                <text>{{list.name}}</text>
+                <text class="type_name_right">{{type_name_right}}</text>
+            </view>
+            <view class="item-list">
+                <view class="item-list-l">关注{{list.num_followers}}</view>｜
+                <view class="item-list-l">粉丝{{list.num_fans}}</view>|
+                <view class="item-list-l">微博{{list.num_weibo}}</view>
+            </view>
+        </view>
+    </view>
+    <view class="items">
+        <view class="f14">微指数</view>
+        <view class="f24 tc font_blue">{{list.windex}}</view>
+    </view>
+    <view class="items">
+        <view class="f14">行业排名</view>
+        <view class="f24 tc font_yellow">第{{list.rank}}名</view>
+    </view>
+    <text class="class-title">近一周数据监控</text>
+    <view class="items">
+        <view class="f14">7天平均转发数</view>
+        <view class="f24 tc font_blue">{{list.reposts_count_week}}</view>
+        <view class="line"></view>
+        <view class="col-6 tl border-right">
+            <view class="f14">7天平均评论数</view>
+            <view class="f24 tl font_blue">{{list.comments_count_week}}</view>
+        </view>
+        <view class="col-6 tr">
+            <view class="f14 good-num">7天平均点赞数</view>
+            <view class="f24 tr font_blue good-num">{{list.attitudes_count_week}}</view>
+        </view>
+    </view>
+    <text class="class-title">大数据预估</text>
+    <view class="items">
+        <view class="f14">预估账号价值(元)</view>
+        <view class="f24 tc font_blue">{{list.wb_value}}</view>
+        <view class="line"></view>
+        <view class="col-6 tl border-right">
+            <view class="f14">预估单条广告价格(元)</view>
+            <view class="f24 tl font_blue">{{list.ad_value}}</view>
+        </view>
+        <view class="col-6 tr">
+            <view class="f14 good-num">7天实际曝光量{{list.cover_num}}</view>
+            <view class="f24 tr font_blue good-num" wx:if="{{list.cover_num > 0}}">{{list.cover_num}}</view>
+            <view class="f24 tr font_blue good-num" wx:else="">待更新</view>
+        </view>
+    </view>
+    <text class="class-title">近一周发文习惯</text>
+    <view class="item-box">
+        <view class="circle-box">
+            <view class="bg-circle">
+                <text class="f30">{{list.pub_total_yesterday}}</text>篇
+            </view>
+            <text class="circle-box-title">每日微博数</text>
+        </view>
+        <view class="circle-box">
+            <view class="bg-circle">
+                <text class="f30">{{list.than}}</text>
+            </view>
+            <text class="circle-box-title">此号性价比</text>
+        </view>
+        <view class="circle-box">
+            <view class="bg-circle">
+                <text class="f30">{{list.zombies}}</text>
+            </view>
+            <text class="circle-box-title">僵尸粉比例</text>
+        </view>
+    </view>
+    <!--<text class="class-title">运营走势图</text>
+    <view>
+        <block>图表没法搞啊</block>
+    </view>-->
+    <text class="class-title">七天热门</text>
+    <view class="article-box">
+        <block wx:if="{{article.length=='0'}}">
+            <text>暂无数据</text>
+        </block>
+        <block wx:else="">
+            <block wx:for="{{article}}">
+                <!--<navigator url="文章详情">-->
+                    <view class="article">
+                        <image class="fl article-left-bg" src="http://www.weizhishu.com/timthumb.php?w=160&h=100&q=100&src={{list.avatar}}"></image>
+                        <view class="article-title">
+                            <view class="article-name">{{item.uname}}</view>
+                            <text class="article-list">更新时间：{{item.public_time}}</text>
+                        </view>
+                        <view class="article-cons">
+                            <text class="article-con">{{item.content}}</text>
+                        </view>
+                        <view class="article-bottom">
+                            <view class="article-bottom-list"><image src="../../image/zhuanfa.png" style="width:32rpx;height:32rpx;margin-right:20rpx;"></image>{{item.reposts_count}}</view>|
+                            <view class="article-bottom-list"><image src="../../image/xinxi.png" style="width:32rpx;height:32rpx;margin-right:20rpx;"></image>{{item.comments_count}}</view>|
+                            <view class="article-bottom-list"><image src="../../image/dianzan.png" style="width:32rpx;height:32rpx;margin-right:20rpx;"></image>{{item.attitudes_count}}</view>
+                        </view>
+                    </view>
+                <!--</navigator>-->
+            </block>
+        </block>
+    </view>
+</view>
+
+<include src="../list/footer.wxml"/>
+
+

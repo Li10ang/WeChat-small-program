@@ -1,0 +1,100 @@
+<!--微指数列表微博的-->
+<view class="top">
+    <view class="top-title">
+            <block wx:if="{{type_name == 'wbaccount'}}">
+                <image class="top-title-icon" src="../../image/account_top.png"></image>
+            </block>
+            <block wx:elif="{{type_name == 'wbspread'}}">
+                <image class="top-title-icon" src="../../image/spread_top.png"></image>
+            </block>
+            <block wx:elif="{{type_name == 'wbvalue'}}">
+                <image class="top-title-icon" src="../../image/value_top.png"></image>
+            </block>
+            <block wx:elif="{{type_name == 'wbquality'}}">
+                <image class="top-title-icon" src="../../image/quality_top.png"></image>
+            </block>
+            <block wx:elif="{{type_name == 'wbactive'}}">
+                <image class="top-title-icon" src="../../image/active_top.png"></image>
+            </block>
+            <block wx:elif="{{type_name == 'getWbarticles'}}">
+                <image class="top-title-icon" src="../../image/hotarticle_top.png"></image>
+            </block>
+            <!--<image class="top-title-icon" src="http://img4.imgtn.bdimg.com/it/u=1329717396,327248398&fm=21&gp=0.jpg"></image>-->
+            <!--<image class="top-title-bg" src="../../image/bg_0.png"></image>-->
+    </view>
+    <view class="btn-box">
+        <view class="section">
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" >
+                <view class="picker btn">
+                {{array[index]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+    <view class="title" wx:if="{{type_name == 'wbaccount'}}">微指数榜</view>
+    <view class="title" wx:elif="{{type_name == 'wbspread'}}">传播榜</view>
+    <view class="title" wx:elif="{{type_name == 'wbvalue'}}">估值榜</view>
+    <view class="title" wx:elif="{{type_name == 'wbquality'}}">质量榜</view>
+    <view class="title" wx:elif="{{type_name == 'wbactive'}}">活跃榜</view>
+    <view class="title" wx:elif="{{type_name == 'getWbarticles'}}">爆文榜</view>
+    <view class="time">更新时间：{{time}}</view>
+</view>
+<block class="" wx:if="{{type_name == 'getWbarticles'}}">
+    <!--爆文榜列表-->
+    <block wx:for="{{list}}">
+        <view class="article-box">
+            <view class="list-top">
+                <image class="article-img" width="45" height="45" src="http://www.weizhishu.com/timthumb.php?w=160&h=100&q=100&src={{item.avatar}}"></image>
+                <view class="">
+                    <view class="article-name">{{item.uname}}</view>
+                    <view class="article-time">更新时间：{{item.pubtime}}</view>
+                </view>
+            </view>
+            <view class="list-cont">
+                <text>{{item.content}}</text>
+            </view>
+            <view class="list-bottom">
+                <view class="list-bottom-cell">{{item.reposts_count}}</view> <text>|</text> <view class="list-bottom-cell">{{item.comments_count}}</view> <text>|</text> <view class="list-bottom-cell">{{item.attitudes_count}}</view>
+            </view>
+        </view>
+    </block>
+</block>
+<block wx:else=" ">
+    <!--标题-->
+    <view class="row header-title">
+        <view class="col-w-6 font16">公众号</view>
+        <view class="col-w-6 font16" wx:if="{{type_name == 'wbaccount'}}">微指数</view>
+        <view class="col-w-6 font16" wx:elif="{{type_name == 'wbspread'}}">传播指数</view>
+        <view class="col-w-6 font16" wx:elif="{{type_name == 'wbvalue'}}">账号估值</view>
+        <view class="col-w-6 font16" wx:elif="{{type_name == 'wbquality'}}">质量指数</view>
+        <view class="col-w-6 font16" wx:elif="{{type_name == 'wbactive'}}">活跃指数</view>
+        <view class="col-w-6 font16" wx:else="{{type_name == 'getWbarticles'}}">爆文</view>
+    </view>
+    <!--列表-->
+    <view class="news-item-container">
+        <block wx:for="{{list}}">
+            <navigator url="../phonehotlist/indexwb?wid={{item.weibo_id}}">
+                <view bindtap="tetails" class="items">
+                    <view class="col-w-6 tl">{{index+1}}.<image class="w50" src="{{item.head}}"></image><view class="windex">{{item.name}}</view></view>
+                    <!--<view class="col-w-6">{{item.windex}}</view>-->
+                    <view class="col-w-6" wx:if="{{type_name == 'wbaccount'}}">{{item.windex}}</view>
+                    <view class="col-w-6" wx:elif="{{type_name == 'wbspread'}}">{{item.sindex}}</view>
+                    <view class="col-w-6" wx:elif="{{type_name == 'wbvalue'}}">{{item.wb_value}}</view>
+                    <view class="col-w-6" wx:elif="{{type_name == 'wbquality'}}">{{item.qindex}}</view>
+                    <view class="col-w-6" wx:elif="{{type_name == 'wbactive'}}">{{item.aindex}}</view>
+                    <view class="col-w-6" wx:else="{{type_name == 'getWbarticles'}}"></view>
+                </view>
+            </navigator>
+        </block>
+    </view>
+</block>
+<!--提示信息-->
+<modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="modalChange2">
+  <view> 网络错误，请重试 </view>
+</modal>
+<!--加载中-->
+<view class="body-view">
+  <loading hidden="{{hidden}}" bindchange="loadingChange">
+    加载中...
+  </loading>
+</view>

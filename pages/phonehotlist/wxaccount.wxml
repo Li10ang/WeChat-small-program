@@ -1,0 +1,97 @@
+<!--微指数列表-->
+<view class="top">
+    <view class="top-title">
+            <block wx:if="{{type_name == 'wxaccount'}}">
+                <image class="top-title-icon" src="../../image/account_top.png"></image>
+            </block>
+            <block wx:elif="{{type_name == 'wxspread'}}">
+                <image class="top-title-icon" src="../../image/spread_top.png"></image>
+            </block>
+            <block wx:elif="{{type_name == 'wxvalue'}}">
+                <image class="top-title-icon" src="../../image/value_top.png"></image>
+            </block>
+            <block wx:elif="{{type_name == 'wxquality'}}">
+                <image class="top-title-icon" src="../../image/quality_top.png"></image>
+            </block>
+            <block wx:elif="{{type_name == 'wxactive'}}">
+                <image class="top-title-icon" src="../../image/active_top.png"></image>
+            </block>
+            <block wx:elif="{{type_name == 'getArticles'}}">
+                <image class="top-title-icon" src="../../image/hotarticle_top.png"></image>
+            </block>
+            <!--<image class="top-title-icon" src="http://img4.imgtn.bdimg.com/it/u=1329717396,327248398&fm=21&gp=0.jpg"></image>-->
+            <!--<image class="top-title-bg" src="../../image/bg_0.png"></image>-->
+    </view>
+    <view class="btn-box">
+        <view class="section">
+            <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}" >
+                <view class="picker btn">
+                {{array[index]}}
+                </view>
+            </picker>
+        </view>
+    </view>
+    <view class="title" wx:if="{{type_name == 'wxaccount'}}">微指数榜</view>
+    <view class="title" wx:elif="{{type_name == 'wxspread'}}">传播榜</view>
+    <view class="title" wx:elif="{{type_name == 'wxvalue'}}">估值榜</view>
+    <view class="title" wx:elif="{{type_name == 'wxquality'}}">质量榜</view>
+    <view class="title" wx:elif="{{type_name == 'wxactive'}}">活跃榜</view>
+    <view class="title" wx:elif="{{type_name == 'getArticles'}}">爆文榜</view>
+    <view class="time">更新时间：{{time}}</view>
+</view>
+<block class="" wx:if="{{type_name == 'getArticles'}}">
+    <!--爆文榜列表-->
+    <block wx:for="{{list}}">
+        <view class="article-box">
+            <navigator> 
+                <view class="article">
+                    <image class="fl article-left-bg" src="http://www.weizhishu.com/timthumb.php?w=160&h=100&q=100&src={{item.cover}}"></image>
+                    <view class="article-title">
+                        <view class="article-name">{{item.title}}</view>
+                        <text class="article-list">{{item.digest}}</text>
+                    </view>
+                </view>
+            </navigator>
+        </view>
+    </block>
+</block>
+<block wx:else=" ">
+    <!--标题-->
+    <view class="row header-title">
+        <view class="col-w-6 font16">公众号</view>
+        <view class="col-w-6 font16" wx:if="{{type_name == 'wxaccount'}}">微指数</view>
+        <view class="col-w-6 font16" wx:elif="{{type_name == 'wxspread'}}">传播指数</view>
+        <view class="col-w-6 font16" wx:elif="{{type_name == 'wxvalue'}}">账号估值</view>
+        <view class="col-w-6 font16" wx:elif="{{type_name == 'wxquality'}}">质量指数</view>
+        <view class="col-w-6 font16" wx:elif="{{type_name == 'wxactive'}}">活跃指数</view>
+        <view class="col-w-6 font16" wx:else="{{type_name == 'getArticles'}}">爆文</view>
+    </view>
+    <!--其他列表-->
+    <view class="news-item-container">
+        <block wx:for="{{list}}">
+            <navigator url="../phonehotlist/indexwx?wid={{item.weixin_id}}">
+                <view bindtap="tetails" class="items">
+                    <view class="col-w-6 tl">{{index+1}}.<image class="w50" src="{{item.square_img}}"></image>
+                    <view class="windex">{{item.name}}</view></view>
+                    <!--<view class="col-w-6">{{item.windex}}</view>-->
+                    <view class="col-w-6" wx:if="{{type_name == 'wxaccount'}}">{{item.windex}}</view>
+                    <view class="col-w-6" wx:elif="{{type_name == 'wxspread'}}">{{item.sindex}}</view>
+                    <view class="col-w-6" wx:elif="{{type_name == 'wxvalue'}}">{{item.mp_value}}</view>
+                    <view class="col-w-6" wx:elif="{{type_name == 'wxquality'}}">{{item.qindex}}</view>
+                    <view class="col-w-6" wx:elif="{{type_name == 'wxactive'}}">{{item.aindex}}</view>
+                    <view class="col-w-6" wx:else="{{type_name == 'getArticles'}}"></view>
+                </view>
+            </navigator>
+        </block>
+    </view>
+</block>
+<!--提示信息-->
+<modal class="modal" hidden="{{modalHidden}}" no-cancel bindconfirm="modalChange2">
+  <view> 网络错误，请重试 </view>
+</modal>
+<!--加载中-->
+<view class="body-view">
+  <loading hidden="{{hidden}}" bindchange="loadingChange">
+    加载中...
+  </loading>
+</view>

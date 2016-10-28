@@ -1,0 +1,193 @@
+.colr-blue{color: #1eb5f9}
+.header{
+    width: 100%;
+    text-align: center;
+    padding: 30rpx 0;
+}
+.title{
+    width: 140rpx;
+    height: 140rpx;
+    padding: 40rpx;
+    background: url('../../image/bg_1.png') no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+.title-name-top{
+    color: #63c5a7;
+    font-size: 24rpx;
+    margin: 22rpx 0 4rpx 0;
+    text-align: center;
+}
+.title-name-con{
+    font-size: 32rpx;
+    color: #353535;
+    width: 110rpx;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+}
+
+.con-account{
+    width: 95%;
+    margin: 0 auto;
+}
+.con-account-title{
+    font-size: 32rpx;
+    color: #202020;
+}
+.col-s-6{
+    width: 50%;
+    float: left;
+    overflow: hidden;
+    box-sizing: border-box;
+    padding: 10rpx;
+}
+.img-40{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+    margin: 0 10rpx;
+    vertical-align: middle;
+}
+.con-account-text{
+    font-size: 26rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.article-top-title{
+    float: left;
+    font-size: 32rpx;
+    color: #202020;
+}
+.picker{
+    float: right;
+    display: inline-block;
+    margin-right: 20rpx;
+    font-size: 32rpx;
+    color: #202020;
+}
+.con-article{
+    width: 95%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+/*
+weixin article
+*/
+.article-items{
+
+}
+.article-list-wx{
+    overflow: hidden;
+    height: 120rpx;
+    margin-top: 40rpx;
+}
+.article-list-bg{
+    width: 200rpx;
+    height: 120rpx;
+    float: left;
+    margin-right: 20rpx;
+}
+.article-title{
+    color: #212121;
+    font-size: 32rpx;
+    line-height: 50rpx;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.article-brief{
+    height: 48rpx;
+    font-size: 24rpx;
+    color: #202020;
+    margin-top: 10rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+/*
+底部
+*/
+.footer{
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #4d4d4d;
+    line-height: 40rpx;
+    margin-bottom: 36rpx;
+    margin-top: 50rpx;
+}
+.footer-list{
+    width: 100%;
+    font-size: 24rpx;
+}
+.block{
+    height: 400rpx;
+}
+
+/**/
+.article-list-wb{
+    overflow: hidden;
+    margin-top: 40rpx;
+    border: 1px solid #bdbdbd;
+    border-radius: 6rpx;
+    box-shadow: 0 5px 5px 2px rgba(0,0,0,0.2)
+}
+.article-left-bg{
+    width: 70rpx;
+    height: 70rpx;
+    margin: 26rpx;
+    float: left;
+    border-radius: 50%;
+}
+.article-list{
+    font-size: 22rpx;
+    color: #535353;
+}
+.article-cons{
+    margin: 0 26rpx;
+    margin-bottom: 10rpx;
+    height: 160rpx;
+    overflow: hidden;
+}
+.article-title-wb{
+    vertical-align: middle;
+    padding: 26rpx;    
+}
+.article-name{
+    font-size: 13px;
+    color: #212121;
+    white-space: nowrap;
+    text-align: left;
+    line-height: 21px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.article-title{
+    text-align: left;
+    font-size: 11px;
+    color: #747474;
+    line-height: 21px;
+}
+.article-box{
+    width: 90%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.article-con{
+    font-size: 22rpx;
+}
+.article-bottom{
+    background: #f0f2f4;
+    line-height: normal;
+}
+.article-bottom-list{
+    width: 200rpx;
+    display: inline-block;
+    text-align: center;
+    line-height: 70rpx;
+    font-size: 26rpx;
+}

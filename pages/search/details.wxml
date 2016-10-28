@@ -1,0 +1,112 @@
+<!--关键词搜索结果页-->
+<view class="header">
+    <view class="title">
+        <view class="title-name-top">关键词</view>
+        <view class="title-name-con">{{keyword}}</view>
+    </view>
+</view>
+<!--相关账号-->
+<view class="con-account">
+    <view class="con-account-title">相关账号</view>
+    <view style="overflow: hidden;" wx:if="{{wtype == 'wx'}}">
+        <view class="col-s-6">
+            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[0].square_img}}" class="img-40"></image>
+            <text class="con-account-text">{{list.relatelist[0].name}}</text>  
+        </view>
+        <view class="col-s-6">
+            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[1].square_img}}" class="img-40"></image>
+            <text class="con-account-text">{{list.relatelist[1].name}}</text>  
+        </view>
+        <view class="col-s-6">
+            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[2].square_img}}" class="img-40"></image>
+            <text class="con-account-text">{{list.relatelist[2].name}}</text>  
+        </view>
+        <view class="col-s-6">
+            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[3].square_img}}" class="img-40"></image>
+            <text class="con-account-text">{{list.relatelist[3].name}}</text>  
+        </view>
+        <view class="col-s-6">
+            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[4].square_img}}" class="img-40"></image>
+            <text class="con-account-text">{{list.relatelist[4].name}}</text>  
+        </view>
+        <view class="col-s-6">
+            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[5].square_img}}" class="img-40"></image>
+            <text class="con-account-text">{{list.relatelist[5].name}}</text>  
+        </view>
+    </view>
+    <view style="overflow: hidden;" wx:elif="{{wtype == 'wb'}}">
+        <view class="col-s-6">
+            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[0].avatar}}" class="img-40"></image>
+            <text class="con-account-text">{{list.relatelist[0].name}}</text>  
+        </view>
+        <view class="col-s-6">
+            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[1].avatar}}" class="img-40"></image>
+            <text class="con-account-text">{{list.relatelist[1].name}}</text>  
+        </view>
+        <view class="col-s-6">
+            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[2].avatar}}" class="img-40"></image>
+            <text class="con-account-text">{{list.relatelist[2].name}}</text>  
+        </view>
+        <view class="col-s-6">
+            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[3].avatar}}" class="img-40"></image>
+            <text class="con-account-text">{{list.relatelist[3].name}}</text>  
+        </view>
+        <view class="col-s-6">
+            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[4].avatar}}" class="img-40"></image>
+            <text class="con-account-text">{{list.relatelist[4].name}}</text>  
+        </view>
+        <view class="col-s-6">
+            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[5].avatar}}" class="img-40"></image>
+            <text class="con-account-text">{{list.relatelist[5].name}}</text>  
+        </view>
+    </view>
+</view>
+<!--提及关键词的文章-->
+<view class="con-article">
+    <view class="" style="width: 95%;overflow:hidden;margin:40rpx 0;box-size:border-box;">
+        <view class="article-top-title">提及关键词<text class="colr-blue">{{keyword}}</text>的文章</view>
+        <!--<picker bindchange="" value="{{index}}" range="{{array}}">
+            <view class="picker">
+                {{array[index]}}
+            </view>
+        </picker>-->
+        <view class="picker">最新</view>
+    </view>
+    <!--微信版文章列表-->
+    <view class="article-items" wx:if="{{wtype == 'wx'}}">
+    <block wx:for="{{arti}}">
+        <view class="article-list-wx">
+            <image class="article-list-bg" src="http://www.weizhishu.com/timthumb.php?w=160&h=100&q=100&src={{item.cover}}"></image>
+            <view class="article-list-title">
+                <view class="article-title">{{item.title}}</view>
+                <view class="article-brief">{{item.digest}}</view>
+            </view>
+        </view>
+    </block>
+    </view>
+    <!--微博版文章列表-->
+    <view class="article-items" wx:elif="{{wtype == 'wb'}}">
+    <block wx:for="{{arti}}">
+        <view class="article-list-wb">
+            <image class="fl article-left-bg" src="http://www.weizhishu.com/timthumb.php?w=160&h=100&q=100&src={{item.avatar}}"></image>
+            <view class="article-title-wb">
+                <view class="article-name">{{item.uname}}</view>
+                <text class="article-list">更新时间：{{item.update_time}}</text>
+            </view>
+            <view class="article-cons">
+                <text class="article-con">{{item.content}}</text>
+            </view>
+            <view class="article-bottom">
+                <view class="article-bottom-list"><image src="../../image/zhuanfa.png" style="width:32rpx;height:32rpx;margin-right:20rpx;"></image>{{item.reposts_count}}</view>|
+                <view class="article-bottom-list"><image src="../../image/xinxi.png" style="width:32rpx;height:32rpx;margin-right:20rpx;"></image>{{item.comments_count}}</view>|
+                <view class="article-bottom-list"><image src="../../image/dianzan.png" style="width:32rpx;height:32rpx;margin-right:20rpx;"></image>{{item.attitudes_count}}</view>
+            </view>
+        </view>
+    </block>
+    </view>
+</view>
+<include src="../list/footer.wxml"/>
+<!--loading-->
+<loading hidden="{{hidden}}" bindchange="loadingChange">
+    加载中...
+  </loading>

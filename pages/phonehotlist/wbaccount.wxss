@@ -1,0 +1,184 @@
+.top{
+    background: #007aff;
+    height: 180px;
+    width: 100%;
+    margin-top: -10px;
+    padding-top: 10px;
+}
+.top-title-bg{
+    background: url('image/bg_0.png') no-repeat center;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 0;left: 0;
+    margin-left: -10px;
+    margin-top: -10px;
+}
+.top-title{
+    margin: 20px auto;
+    background: #0062CC;
+    color: #fff;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 80px;
+    position: relative
+}
+.btn-box{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+.btn{
+    padding: 5px 8px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 10px;
+    float: left;
+    color: #007aff;    
+    background: #fff;
+}
+.time{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #fff;
+}
+.title{
+    text-align: center;
+    margin: 0 auto;
+    font-size: 20px;
+    color: #fff;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+.top-title-icon{
+    width: 40px;
+    height: 40px;
+    margin-top: 20px;
+}
+/*顶部代码结束*/
+.row{
+    position: relative;
+    overflow: hidden;
+}
+.header-title{
+    border-bottom: 1px solid #ccc;
+}
+.col-w-6{
+    width: 50%;
+    float: left;
+    text-align: center;
+    line-height: 55px;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.font16{
+    font-size: 16px;
+}
+.tl{
+    text-align: left;
+}
+.w50{
+    width: 50px;
+    height: 50px;
+    margin: 0 6px;
+    vertical-align: middle;
+    border-radius: 50%;
+}
+.windex{
+    max-width: 75px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: middle;
+}
+.items{
+    overflow: hidden;
+    padding: 11px 15px;
+    padding-right: 0;
+    border-bottom: 1px solid #ccc;
+}
+@media screen and (min-width: 350px){
+    .windex{max-width: 95px;}
+}
+/*爆文榜*/
+/*<view class="article-box">
+            <view class="list-top">
+                <image class="article-img" src="http://tva1.sinaimg.cn/crop.0.0.179.179.1024/7fb3c63fgw1ejuk7zvfw7j2050050wee.jpg"></image>
+                <view class="">
+                    <view>全球影视指南</view>
+                    <view>更新时间：2016年10月16日</view>
+                </view>
+            </view>
+            <view class="list-cont">
+                <text>分享一些顶尖电影给大家，剧荒的收走！</text>
+            </view>
+            <view class="list-bottom">
+                <view class="list-bottom-cell"></view> | <view class="list-bottom-cell"></view> | <view class="list-bottom-cell"></view>
+            </view>
+        </view>*/
+.article-box{
+    width: 90%;
+    border-width: 1px;
+    border-color: rgb(189, 189, 189);
+    border-style: solid;
+    border-radius: 3px;
+    background-color: rgb(255, 255, 255);
+    box-shadow: -0.487px 3.97px 9px 0px rgba(7, 0, 2, 0.4);
+    border-bottom: 0;
+    margin: 10px auto;
+}
+.list-top{
+    padding: 13px;
+    color: #4d4d4d;
+    line-height: 55px;
+    background: #fff;
+    font-size: 16px;
+}
+.article-img{
+    width: 45px;
+    height: 45px;
+    margin-right: 20px;
+    float: left;
+}
+.article-name{
+    font-size: 13px;
+    color: #212121;
+    line-height: 20px;
+    text-align: left;
+}
+.article-time{
+    font-size: 10px;
+    color: #646363;
+    line-height: 20px;
+    text-align: left;
+}
+.list-cont{
+    text-align: center;
+    font-size: 16px;
+    color: #4d4d4d;
+    line-height: 55px;
+    background: #fff;
+    font-size: 11px;
+    color: #212121;
+    padding: 0 13px;
+    line-height: 20px;
+    text-align: left;
+}
+.list-bottom{
+    background: #f0f2f4;
+    line-height: normal;
+    font-size: 16px;
+    text-align: left;
+}
+.list-bottom-cell{
+    width: 30%;
+    display: inline-block;
+    line-height: 35px;
+    text-align: center;
+    font-size: 13px;
+    box-sizing: border-box;
+}

@@ -1,0 +1,9 @@
+<!--代运营-->
+<view>
+    <image src="../../image/yunying-01.png" class="bg" mode="aspectFit" style="height:120px;"></image>
+    <image src="../../image/yunying-02.png" class="bg" mode="aspectFit" style="height:120px;"></image>
+    <image src="../../image/yunying-03.png" class="bg" mode="aspectFit"></image>
+    <image src="../../image/yunying-04.png" class="bg" mode="aspectFit"></image>
+    <image src="../../image/yunying-05.png" class="bg" mode="aspectFit"></image>
+    <image src="../../image/yunying-06.png" class="bg" mode="aspectFit"></image>
+</view>

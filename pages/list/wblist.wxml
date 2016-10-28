@@ -1,0 +1,35 @@
+<!--index.wxml-->
+<view class="top">
+    <view class="top-title">
+        微榜单
+            <image class="top-title-bg" src="../../image/bg_0.png"></image>
+    </view>
+    <view class="btn-box">
+        <view class="btn" bindtap="wx">微信</view>
+        <view class="btn active" >微博</view>
+    </view>
+    <view class="time">更新时间：{{time}}</view>
+</view>
+
+<template name="staffName">
+        <view class="names {{bg}}" bindtap="check{{typename}}">
+            <view class="name {{typename}}">
+                {{firstName}}            
+            </view>
+            <view class="titles">
+                <view class="title">1.{{title1}}</view>
+                <view class="title">2.{{title2}}</view>
+                <view class="title">3.{{title3}}</view>
+            </view>
+        </view>
+</template>
+    
+<template is="staffName" data="{{...staffA}}"></template>
+<template is="staffName" data="{{...staffB}}"></template>
+<template is="staffName" data="{{...staffC}}"></template>
+<template is="staffName" data="{{...staffD}}"></template>
+<template is="staffName" data="{{...staffE}}"></template>
+<template is="staffName" data="{{...staffF}}"></template>
+<view class="footer">
+    <view class="footer-title-one">{{bottomOne}}</view>
+</view>

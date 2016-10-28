@@ -1,0 +1,17 @@
+<view class="map-box">
+    <!--<map longitude="113.324520" latitude="23.099994" markers="{{markers}}" covers="{{covers}}" style="width: 375px; height: 200px;"></map>-->
+    <map longitude="{{point.longitude}}" latitude="{{point.latitude}}" markers="{{markers}}" covers="{{covers}}" style="width: 320px; height:420px;"></map>
+</view>
+<view class="box">
+    <view class="title">
+    <image class="small-icon" src="../../image/about.png"></image> 联系我们
+    </view>
+    <view class="name">北京微指数科技有限公司</view>
+    <view>
+        <view class="item"><image class="small-icon" src="../../image/place.png"></image>地址：北京朝阳区浦项中心b座</view>
+        <view class="item"><image class="small-icon" src="../../image/email.png"></image>客服邮箱：liutianji@weizhishu.com</view>
+        <view class="item"><image class="small-icon" src="../../image/tel.png"></image>电话：010-64773966转811</view>
+        <view class="item"><image class="small-icon" src="../../image/qq.png"></image>客服QQ：3082135749</view>
+        <view class="item"><image class="small-icon" src="../../image/web.png"></image>网址：www.weizhishu.com</view>
+    </view>
+</view>

@@ -1,0 +1,13 @@
+.footer{
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+    color: #4d4d4d;
+    line-height: 40rpx;
+    margin-bottom: 36rpx;
+    margin-top: 50rpx;
+}
+.footer-list{
+    width: 100%;
+    font-size: 24rpx;
+}

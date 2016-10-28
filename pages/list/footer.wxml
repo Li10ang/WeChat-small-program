@@ -1,0 +1,6 @@
+<!--通用底部-->
+<view class="footer">
+    <view class="footer-list">更多功能请登录www.weizhishu.com</view>
+    <view class="footer-list">Copyright @2015-2016 北京微指数科技有限公司</view>
+    <view class="footer-list">All Rights Reserved 版权所有</view>
+</view>

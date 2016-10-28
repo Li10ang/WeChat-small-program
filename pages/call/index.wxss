@@ -1,0 +1,24 @@
+.btn-box{
+    width: 700rpx;
+    height: 700rpx;
+    margin: auto;
+    overflow: hidden;
+    box-sizing: border-box;
+    margin-top: 200rpx;
+}
+.btn{
+    width: 300rpx;
+    height: 300rpx;
+    margin: 24rpx;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+    float: left
+}
+.btn-icon{
+    width: 150rpx;
+    height: 150rpx;
+    margin: 50rpx auto;
+    display: block;
+}
