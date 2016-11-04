@@ -52,7 +52,7 @@ Page({
     // var that = this;
     // var inputValue = inputContent[e.currentTarget.id]
     // wx.request({
-    //   url: 'http://www.weizhishu.com/phonesearch/searchwxapi',
+    //   url: 'http://release.weizhishu.com/wxlittlepro/searchwxapi',
     //   data: {keyword: inputValue },
     //   success: function (res) {
     //     console.log(res);
@@ -74,7 +74,7 @@ Page({
     // var that = this;
     // var inputValue = inputContent[e.currentTarget.id]
     // wx.request({
-    //   url: 'http://www.weizhishu.com/phonesearch/searchwbapi',
+    //   url: 'http://release.weizhishu.com/wxlittlepro/searchwbapi',
     //   data: {keyword: inputValue },
     //   success: function (res) {
     //     console.log(res);

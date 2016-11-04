@@ -22,7 +22,7 @@ Page({
     // 页面初始化 options为页面跳转所带来的参数
     var that = this
     wx.request({
-      url: 'http://www.weizhishu.com/phonehotlist/indexwxapi?wid='+options.wid,
+      url: 'http://release.weizhishu.com/wxlittlepro/indexwxapi?wid='+options.wid,
       success: function (res) {
          that.setData({
            list: res.data.data.wxinfo,

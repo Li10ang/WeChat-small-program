@@ -26,7 +26,7 @@ Page({
     // 进入页面的时候请求微信的数据
     var that = this;
     wx.request({
-      url: 'http://www.weizhishu.com/phonehotlist/microwxlistapi',
+      url: 'http://release.weizhishu.com/wxlittlepro/microwxlistapi',
       success: function (res) {
          that.setData({
             staffA: {firstName: '微指数榜', typename: 'wzs', title1: res.data.data.wei[0].name ,title2: res.data.data.wei[1].name , title3: res.data.data.wei[2].name, bg: 'bg1'},

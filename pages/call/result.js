@@ -26,7 +26,7 @@ Page({
     var info
     if( type == 'wx' ){
           wx.request({
-            url: 'http://release.weizhishu.com/mpvalue/wxvalue?wid='+id,
+            url: 'http://release.weizhishu.com/wxlittlepro/wxvalue?wid='+id,
             success: function (res) {
                 that.setData({
                 list: res.data.data,
@@ -36,7 +36,7 @@ Page({
             })
       }else{
           wx.request({
-            url: 'http://release.weizhishu.com/mpvalue/wbvalue?wid='+id,
+            url: 'http://release.weizhishu.com/wxlittlepro/wbvalue?wid='+id,
             success: function (res) {
                 that.setData({
                 list: res.data.data,

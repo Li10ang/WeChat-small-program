@@ -1,6 +1,6 @@
 function find(){
          wx:request({
-           url: "http://www.weizhishu.com/phonehotlist/categoryapi",
+           url: "http://release.weizhishu.com/wxlittlepro/categoryapi",
            success: function(res){
               // console.log(res)
            }

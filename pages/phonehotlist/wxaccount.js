@@ -27,7 +27,7 @@ Page({
     // 进入页面的时候取数据
     var that = this
     wx.request({
-      url: 'http://www.weizhishu.com/phonehotlist/'+type+'api',
+      url: 'http://release.weizhishu.com/wxlittlepro/'+type+'api',
       data: {cid:'0'},
       success: function (res) {
          that.setData({
@@ -66,7 +66,7 @@ Page({
     });
     that.setData({ loading: true })
     wx.request({
-      url: 'http://www.weizhishu.com/phonehotlist/'+type+'api',
+      url: 'http://release.weizhishu.com/wxlittlepro/'+type+'api',
       data: {cid: cid},
       success: function (res) {
          that.setData({
@@ -90,6 +90,6 @@ Page({
    modalChange2: function(e) {
     this.setData({
       modalHidden: true
-    })
+    })       
   }
 })
