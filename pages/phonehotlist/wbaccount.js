@@ -13,7 +13,7 @@ Page({
     time: GetDateStr(-1),
     firstname:"微指数",
     bottomOne: "Copyright @2015 北京微指数科技有限公司",
-    array: ['总榜', '新闻', '娱乐', '搞笑', '旅游', '美食', '财经', '健康', '管理', '情感', '政务', '丽人', '汽车', '楼市', '时尚', '科技', '游戏', '文史', '名人', '影音', '动漫', '企业', '本地', '摄影', '亲子', '生活', '两性', '热门'],
+    array: '',
     index: 0,
     type_name: '',
     // 提示框
@@ -26,7 +26,7 @@ Page({
     // 进入页面的时候取数据
     var that = this
     wx.request({
-      url: 'http://release.weizhishu.com/wxlittlepro/'+type+'api',
+      url: 'https://release.weizhishu.com/wxlittlepro/'+type+'api',
       data: {cid:'0'},
       success: function (res) {
          that.setData({
@@ -43,6 +43,24 @@ Page({
   },
   onShow:function(){
     // 页面显示
+    var that = this;
+    wx.request({
+      url: 'https://release.weizhishu.com/wxlittlepro/categorywbapi?type=1',
+      method: 'GET', // OPTIONS, GET, HEAD, POST, PUT, DELETE, TRACE, CONNECT
+      // header: {}, // 设置请求的 header
+      success: function(res){
+        // success
+        that.setData({
+          array: res.data.data
+        })
+      },
+      fail: function() {
+        // fail
+      },
+      complete: function() {
+        // complete
+      }
+    })
   },
   onHide:function(){
     // 页面隐藏
@@ -65,7 +83,7 @@ Page({
     });
     that.setData({ loading: true })
     wx.request({
-      url: 'http://release.weizhishu.com/wxlittlepro/'+type+'api',
+      url: 'https://release.weizhishu.com/wxlittlepro/'+type+'api',
       data: {cid: cid},
       success: function (res) {
          that.setData({

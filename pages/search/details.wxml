@@ -10,53 +10,53 @@
     <view class="con-account-title">相关账号</view>
     <view style="overflow: hidden;" wx:if="{{wtype == 'wx'}}">
         <view class="col-s-6">
-            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[0].square_img}}" class="img-40"></image>
+            <image src="https://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[0].square_img}}" class="img-40"></image>
             <text class="con-account-text">{{list.relatelist[0].name}}</text>  
         </view>
         <view class="col-s-6">
-            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[1].square_img}}" class="img-40"></image>
+            <image src="https://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[1].square_img}}" class="img-40"></image>
             <text class="con-account-text">{{list.relatelist[1].name}}</text>  
         </view>
         <view class="col-s-6">
-            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[2].square_img}}" class="img-40"></image>
+            <image src="https://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[2].square_img}}" class="img-40"></image>
             <text class="con-account-text">{{list.relatelist[2].name}}</text>  
         </view>
         <view class="col-s-6">
-            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[3].square_img}}" class="img-40"></image>
+            <image src="https://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[3].square_img}}" class="img-40"></image>
             <text class="con-account-text">{{list.relatelist[3].name}}</text>  
         </view>
         <view class="col-s-6">
-            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[4].square_img}}" class="img-40"></image>
+            <image src="https://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[4].square_img}}" class="img-40"></image>
             <text class="con-account-text">{{list.relatelist[4].name}}</text>  
         </view>
         <view class="col-s-6">
-            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[5].square_img}}" class="img-40"></image>
+            <image src="https://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[5].square_img}}" class="img-40"></image>
             <text class="con-account-text">{{list.relatelist[5].name}}</text>  
         </view>
     </view>
     <view style="overflow: hidden;" wx:elif="{{wtype == 'wb'}}">
         <view class="col-s-6">
-            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[0].avatar}}" class="img-40"></image>
+            <image src="https://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[0].avatar}}" class="img-40"></image>
             <text class="con-account-text">{{list.relatelist[0].name}}</text>  
         </view>
         <view class="col-s-6">
-            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[1].avatar}}" class="img-40"></image>
+            <image src="https://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[1].avatar}}" class="img-40"></image>
             <text class="con-account-text">{{list.relatelist[1].name}}</text>  
         </view>
         <view class="col-s-6">
-            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[2].avatar}}" class="img-40"></image>
+            <image src="https://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[2].avatar}}" class="img-40"></image>
             <text class="con-account-text">{{list.relatelist[2].name}}</text>  
         </view>
         <view class="col-s-6">
-            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[3].avatar}}" class="img-40"></image>
+            <image src="https://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[3].avatar}}" class="img-40"></image>
             <text class="con-account-text">{{list.relatelist[3].name}}</text>  
         </view>
         <view class="col-s-6">
-            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[4].avatar}}" class="img-40"></image>
+            <image src="https://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[4].avatar}}" class="img-40"></image>
             <text class="con-account-text">{{list.relatelist[4].name}}</text>  
         </view>
         <view class="col-s-6">
-            <image src="http://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[5].avatar}}" class="img-40"></image>
+            <image src="https://release.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{list.relatelist[5].avatar}}" class="img-40"></image>
             <text class="con-account-text">{{list.relatelist[5].name}}</text>  
         </view>
     </view>

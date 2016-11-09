@@ -50,7 +50,7 @@ Page({
     var that = this;
     var inputValue = inputContent[e.currentTarget.id]
     wx.request({
-      url: 'http://release.weizhishu.com/wxlittlepro/searchwx',
+      url: 'https://release.weizhishu.com/wxlittlepro/searchwx',
       data: {keyword: inputValue },
       success: function (res) {
          that.setData({
@@ -69,7 +69,7 @@ Page({
     var that = this;
     var inputValue = inputContent[e.currentTarget.id]
     wx.request({
-      url: 'http://release.weizhishu.com/wxlittlepro/searchwb',
+      url: 'https://release.weizhishu.com/wxlittlepro/searchwb',
       data: {keyword: inputValue },
       success: function (res) {
          that.setData({

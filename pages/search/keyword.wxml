@@ -37,7 +37,7 @@
                             <image src="http://www.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{item.square_img}}" class="avatar-bg"></image>
                         </view>
                         <view class="msg">
-                            <view class="msg-title">{{item.name}}<image src="http://release.weizhishu.com//img/phonelist/icon_wx.png" class="msg-icon"></image></view>
+                            <view class="msg-title">{{item.name}}<image src="https://release.weizhishu.com//img/phonelist/icon_wx.png" class="msg-icon"></image></view>
                             <view class="msg-name">微信号：{{item.nick_name}}</view>
                         </view>
                     </navigator>
@@ -58,7 +58,7 @@
                             <image src="http://www.weizhishu.com/timthumb.php?w=200&h=200&q=100&src={{item.avatar}}" class="avatar-bg"></image>
                         </view>
                         <view class="msg">
-                            <view class="msg-title">{{item.name}}<image src="http://release.weizhishu.com//img/phonelist/icon_wb.png" class="msg-icon"></image></view>
+                            <view class="msg-title">{{item.name}}<image src="https://release.weizhishu.com//img/phonelist/icon_wb.png" class="msg-icon"></image></view>
                             <view class="msg-name">粉丝数：{{item.num_fans}}</view>
                         </view>
                     </navigator>

@@ -70,6 +70,7 @@
     float: left;
     background: transparent;
     font-size: 12px;
+    width: 150px;
 }
 .search-in{
    float: left;

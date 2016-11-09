@@ -13,7 +13,7 @@ Page({
     // 页面初始化 options为页面跳转所带来的参数
     var that = this;
     wx.request({
-      url: 'http://release.weizhishu.com/phonesearch/details'+options.wtype+'api?keyword='+options.keyword,
+      url: 'https://release.weizhishu.com/phonesearch/details'+options.wtype+'api?keyword='+options.keyword,
       success: function (res) {
          that.setData({
             keyword: options.keyword,
@@ -42,7 +42,7 @@ Page({
     var type = e.detail.value;
     if(e.detail.value == 0){type = 2}
     wx.request({
-      url: 'http://release.weizhishu.com/phonesearch/detailswxapi',
+      url: 'https://release.weizhishu.com/phonesearch/detailswxapi',
     //   data: {keyword: keyword, time: type},
       success: function (res) {
         
